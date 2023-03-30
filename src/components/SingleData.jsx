@@ -5,6 +5,7 @@ import { faBookmark } from '@fortawesome/free-regular-svg-icons';
 const SingleData = (props) => {
     const {id, author, title, cover_image, author_image, publish_date, read_time, tag} = props.blog ;
     const addBookmark = props.addBookmark;
+    const addTime = props.addTime;
     return (
         <div className='space-y-5'>
             <img src={cover_image} alt="" className='max-h-96 w-full rounded-md' />
@@ -25,7 +26,7 @@ const SingleData = (props) => {
             </div>
             <h1 className='text-3xl font-bold '>{title}</h1>
             <p className='text-[rgba(17, 17, 17, 0.6)] '>{tag.join(" ")}</p>
-            <button className='text-[#6047EC] border-b-2 border-[#6047EC]'>Mark as read</button>
+            <button className='text-[#6047EC] border-b-2 border-[#6047EC]' onClick={()=> addTime(read_time)}>Mark as read</button>
             <hr />
         </div>
     );
