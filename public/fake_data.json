@@ -1,0 +1,56 @@
+[
+    {
+      "id": 1,
+      "author": "Rob Enderle",
+      "title": "How Generative AI Will Change News, Books, TV, Movies and Education",
+      "cover_image": "https://www.technewsworld.com/wp-content/uploads/sites/3/2022/03/data-room.jpg",
+      "author_image": "./images/user1.png",
+      "publish_date": "March 6, 2023",
+      "read_time": 10,
+      "tag": [
+        "#AI",
+        "#Health"
+      ]
+    },
+    {
+      "id": 2,
+      "author": "M. Germain",
+      "title": "Linux Malware Rates Rise to Record Levels Amid Hacker Inconsistency",
+      "cover_image": "https://www.technewsworld.com/wp-content/uploads/sites/3/2023/01/malware-alert.jpg",
+      "author_image": "./images/user2.png",
+      "publish_date": "January 23, 202",
+      "read_time": 15,
+      "tag": [
+        "#Security",
+        "#Linux",
+        "#Malware"
+      ]
+    },
+    {
+      "id": 3,
+      "author": "Benedict Hobart",
+      "title": "Sony ZV-E1 12MP Full-Frame Interchangeable Lens Camera is Designed for Vloggers",
+      "cover_image": "https://www.techeblog.com/wp-content/uploads/2023/03/sony-zv-e1-full-frame-interchangeable-lens-camera.jpg",
+      "author_image": "./images/user3.png",
+      "publish_date": "MARCH 29, 2023",
+      "read_time": 5,
+      "tag": [
+        "#Gadget",
+        "#Sony"
+      ]
+    },
+    {
+      "id": 4,
+      "author": "Joe Maring",
+      "title": "Tired of Google ruining your Fitbit? Look at these 5 alternatives",
+      "cover_image": "https://www.digitaltrends.com/wp-content/uploads/2023/03/amazfit-band-7-official-render.jpg",
+      "author_image": "./images/user4.png",
+      "publish_date": "March 28, 2023",
+      "read_time": 15,
+      "tag": [
+        "#Gadget",
+        "#Google",
+        "#Watch"
+      ]
+    }
+  ]
