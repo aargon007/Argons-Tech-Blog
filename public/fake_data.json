@@ -3,9 +3,9 @@
       "id": 1,
       "author": "Rob Enderle",
       "title": "How Generative AI Will Change News, Books, TV, Movies and Education",
-      "cover_image": "https://www.technewsworld.com/wp-content/uploads/sites/3/2022/03/data-room.jpg",
+      "cover_image": "https://www.aiscorp.com/app/uploads/2020/02/what_is_artificial_intelligence_blog_main.png",
       "author_image": "./images/user1.png",
-      "publish_date": "March 6, 2023",
+      "publish_date": "March 26, 2023",
       "read_time": 10,
       "tag": [
         "#AI",
@@ -18,7 +18,7 @@
       "title": "Linux Malware Rates Rise to Record Levels Amid Hacker Inconsistency",
       "cover_image": "https://www.technewsworld.com/wp-content/uploads/sites/3/2023/01/malware-alert.jpg",
       "author_image": "./images/user2.png",
-      "publish_date": "January 23, 202",
+      "publish_date": "January 23, 2023",
       "read_time": 15,
       "tag": [
         "#Security",

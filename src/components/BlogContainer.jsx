@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react';
+import { toast } from 'react-toastify';
 import Bookmark from './Bookmark';
 import SingleData from './SingleData';
 
@@ -8,8 +9,13 @@ const BlogContainer = () => {
     const [timeRead, setTimeRead] = useState(0);
 
     const addBookmark = (title)=>{
-        const newTitle = [...bookmark, title]
-        setBookmark(newTitle)
+        if(!bookmark.includes(title)){
+            const newTitle = [...bookmark, title]
+            setBookmark(newTitle)
+            toast("Bookmark added successfully")
+        } else {
+            toast("Bookmark already added")
+        }
     }
     // console.log(bookmark);
     const addTime = (time)=>{
@@ -20,15 +26,14 @@ const BlogContainer = () => {
         const loadData = async () => {
             const res = await fetch("/fake_data.json");
             const data = await res.json();
-            
             setBlogData(data);
         }
         loadData();
     }, [])
 
     return (
-        <div className='flex mt-5 gap-5'>
-            <div className='w-7/12 space-y-10'>
+        <div className='flex md:flex-row flex-col my-5 gap-5'>
+            <div className='md:w-7/12 space-y-10'>
                 {
                     blogData.map( blog => <SingleData
                          blog={blog}
