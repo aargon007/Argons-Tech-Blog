@@ -21,7 +21,7 @@ const SingleData = (props) => {
                     <img src={author_image} className="w-12" alt="" />
                     <div>
                         <h1 className='text-lg font-bold'>{author}</h1>
-                        <p>{publish_date} ({timeAgo.format(pubDate - 24 * 60 * 60 * 1000)})</p>
+                        <p>{publish_date} ({timeAgo.format(pubDate - 24 * 60 * 1000)})</p>
                     </div>
                 </div>
                 <p className='text-lg'>{read_time} min read 

@@ -7,21 +7,7 @@ const BlogContainer = () => {
     const [blogData, setBlogData] = useState([]);
     const [bookmark, setBookmark] = useState([]);
     const [timeRead, setTimeRead] = useState(0);
-
-    const addBookmark = (title)=>{
-        if(!bookmark.includes(title)){
-            const newTitle = [...bookmark, title]
-            setBookmark(newTitle)
-            toast("Bookmark added successfully")
-        } else {
-            toast("Bookmark already added")
-        }
-    }
-    // console.log(bookmark);
-    const addTime = (time)=>{
-        const newTime = timeRead + time;
-        setTimeRead(newTime)
-    }
+    //fetch data from json
     useEffect( () => {
         const loadData = async () => {
             const res = await fetch("/fake_data.json");
@@ -30,6 +16,33 @@ const BlogContainer = () => {
         }
         loadData();
     }, [])
+
+    const addBookmark = (title)=>{
+        const previousBookmark = JSON.parse(localStorage.getItem("bookmarks"));
+        console.log(previousBookmark);
+        if(previousBookmark == null || !previousBookmark.includes(title)){
+            let bookmarkItem = [...bookmark, title];
+            localStorage.setItem("bookmarks", JSON.stringify(bookmarkItem));
+            setBookmark(bookmarkItem)
+            toast("Bookmark added successfully")
+        } else {
+            toast("Bookmark already added")
+        }
+    }
+    
+    // console.log(bookmark);
+    const addTime = (time)=>{
+        const previousTime = JSON.parse(localStorage.getItem("read_time"));
+        if(previousTime){
+            const sum = previousTime + time;
+            localStorage.setItem("read_time", sum)
+            setTimeRead(sum);
+        } else {
+            localStorage.setItem("read_time", time);
+            setTimeRead(time)
+        }
+    }
+    
 
     return (
         <div className='flex md:flex-row flex-col my-5 gap-5'>
