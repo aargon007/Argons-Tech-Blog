@@ -45,7 +45,7 @@ const BlogContainer = () => {
     
 
     return (
-        <div className='flex md:flex-row flex-col my-5 gap-5'>
+        <div className='flex md:flex-row flex-col mt-5 mb-10 gap-5'>
             <div className='md:w-7/12 space-y-10'>
                 {
                     blogData.map( blog => <SingleData
