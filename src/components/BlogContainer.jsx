@@ -19,14 +19,14 @@ const BlogContainer = () => {
 
     const addBookmark = (title)=>{
         const previousBookmark = JSON.parse(localStorage.getItem("bookmarks"));
-        console.log(previousBookmark);
+        // console.log(previousBookmark);
         if(previousBookmark == null || !previousBookmark.includes(title)){
             let bookmarkItem = [...bookmark, title];
             localStorage.setItem("bookmarks", JSON.stringify(bookmarkItem));
             setBookmark(bookmarkItem)
-            toast("Bookmark added successfully")
+            toast.success("Bookmark added successfully")
         } else {
-            toast("Bookmark already added")
+            toast.error("Bookmark already added")
         }
     }
     

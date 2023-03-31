@@ -15,10 +15,10 @@ const SingleData = (props) => {
     //return jsx element
     return (
         <div className='space-y-5'>
-            <img src={cover_image} alt="" className='max-h-80 w-full rounded-md' />
-            <div className='flex justify-between'>
-                <div className='flex gap-5'>
-                    <img src={author_image} className="w-12" alt="" />
+            <img src={cover_image} alt="" className='h-60 md:h-80 w-full rounded-md' />
+            <div className='flex justify-between md:flex-row flex-col gap-3'>
+                <div className='flex gap-5 items-center'>
+                    <img src={author_image} className="w-10 h-10" alt="" />
                     <div>
                         <h1 className='text-lg font-bold'>{author}</h1>
                         <p>{publish_date} ({timeAgo.format(pubDate - 24 * 60 * 1000)})</p>
@@ -28,10 +28,12 @@ const SingleData = (props) => {
                     <FontAwesomeIcon
                        icon={faBookmark}
                         onClick={()=> addBookmark(title)}
-                        className="ms-2 active:bg-slate-700 hover:bg-sky-300" />
+                        className="ms-3 active:bg-amber-400 hover:bg-sky-300 font-bold" />
                 </p>
             </div>
-            <h1 className='text-3xl font-bold '>{title}</h1>
+            <h1 className='md:text-3xl text-2xl font-bold '>
+                {title}
+            </h1>
             <p className='text-slate-500'>{tag.join("  ")}</p>
             <button className='text-[#6047EC] border-b-2 border-[#6047EC] hover:text-red-600' onClick={()=> addTime(read_time)}>Mark as read</button>
             <hr />

@@ -9,7 +9,6 @@ const Bookmark = (props) => {
 
     useEffect(()=>{
         const getBookmarkFromLocal = JSON.parse(localStorage.getItem("bookmarks"));
-        console.log(getBookmarkFromLocal);
         setLocalBookmark(getBookmarkFromLocal);
     },[bookmark])
 
