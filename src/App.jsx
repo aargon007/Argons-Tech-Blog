@@ -12,7 +12,7 @@ const App = () => {
     <div className='mt-5 md:px-16 lg:px-28 px-5 mb-10 font-inter'>
       <Header></Header>
       <BlogContainer></BlogContainer>
-      <HWBlog></HWBlog>
+      {/* <HWBlog></HWBlog> */}
       <a href="#home" className="hidden md:block fixed z-90 bottom-8 right-8 border-0 px-5 py-3 rounded-full drop-shadow-md bg-indigo-500 text-white text-3xl font-bold"><FontAwesomeIcon icon={faArrowUp}></FontAwesomeIcon></a>
       <ToastContainer></ToastContainer>
     </div>
